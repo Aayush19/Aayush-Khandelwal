@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/About-Aayush-Khandelwal/precache-manifest.c3e5f47ea4dd2ea3936c6c492dc494ca.js"
+  "/Aayush-Khandelwal/precache-manifest.dd672c44202c136667f09cf437559367.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/About-Aayush-Khandelwal/index.html", {
+workbox.routing.registerNavigationRoute("/Aayush-Khandelwal/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
