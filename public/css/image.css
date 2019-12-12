@@ -1,0 +1,4 @@
+.bgimage{
+    backgroundImage: 'url(images/img_bg.jpg)';
+    transform: rotate(45deg);
+}
