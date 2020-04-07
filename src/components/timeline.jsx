@@ -18,6 +18,31 @@ export default class Timeline extends Component {
             <div className="row">
               <div className="col-md-12">
                 <div className="timeline-centered">
+                <article
+                    className="timeline-entry animate-box"
+                    data-animate-effect="fadeInLeft"
+                  >
+                    <div className="timeline-entry-inner">
+                      <div className="timeline-icon color-3">
+                        <i className="icon-pen2" />
+                      </div>
+                      <div className="timeline-label">
+                        <h2>
+                          Internship at Bitibe Technologies Pvt. Ltd.{" "}
+                          <span>January/2020 - April/2020</span>
+                        </h2>
+                        <p>
+                          I recently have completed my internship at Bitibe Technologies
+                          Pvt. Ltd. as a Software Developer-Intern in the Developer
+                          team. My major part of the work has been into the
+                          field of developing Mobile Application for the
+                          Clients. I explored various libraries of React Native and
+                          Node.js also explored other technologies like
+                          postman.
+                        </p>
+                      </div>
+                    </div>
+                  </article>
                   <article
                     className="timeline-entry animate-box"
                     data-animate-effect="fadeInLeft"
