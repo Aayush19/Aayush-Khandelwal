@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+import Projects from "./projects";
 // import '../../public/css/image.css'
 export default class Introduction extends Component {
+  projectScreen = ()=> {
+    <Projects />
+  }
   render() {
     return (
       <div>
@@ -60,7 +64,8 @@ export default class Introduction extends Component {
                           <p>
                             <a
                               className="btn btn-primary btn-learn"
-                              href="https://github.com/Aayush19"
+                              onClick={()=>this.projectScreen()}
+                              // href="https://github.com/Aayush19"
                               target="_blank"
                               rel="noopener noreferrer"
                               style={{ color: "white" }}
