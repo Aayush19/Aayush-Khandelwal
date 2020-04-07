@@ -1,6 +1,10 @@
 import React, { Component } from "react";
+import {Aboutme} from "../Data/Data"
 
+const data =Aboutme;
+const detailSheet = data.detail;
 export default class About extends Component {
+
   render() {
     return (
       <div>
@@ -14,15 +18,12 @@ export default class About extends Component {
                 >
                   <div className="col-md-12">
                     <div className="about-desc">
-                      <span className="heading-meta">About Us</span>
-                      <h2 className="colorlib-heading">Who Am I?</h2>
-                      <p>
-                        I am a computer grad student from Shri Vaishanv
-                        Vidyapeeth Vishwavidyalaya.I love exploring new
-                        technologies and often amazed by the progress we as a
-                        human species have mad so far in the recent years.
+                    <span className="heading-meta">{data.title1}</span>
+                      <h2 className="colorlib-heading">{data.heading1}</h2>
+                      <p align="justify">
+                        {data.description1}
                       </p>
-                      {/* <p>I have started reflecting my ideas and thougths through the medium of words recently so spelling and grammer mistaks are very often.You can write me back if you spot any and don't want to live anymore :P </p> */}
+                      <p align="justify">I have started reflecting my ideas and thougths through the medium of words recently so spelling and grammer mistaks are very often.You can write me back if you spot any and don't want to live anymore :P </p>
                     </div>
                   </div>
                 </div>
@@ -37,87 +38,31 @@ export default class About extends Component {
                 className="col-md-6 col-md-offset-3 col-md-pull-3 animate-box"
                 data-animate-effect="fadeInLeft"
               >
-                <span className="heading-meta">What I do?</span>
+                <span className="heading-meta">{data.title2}</span>
                 <h2 className="colorlib-heading">
-                  Here are some of my expertise
+                  {data.heading2}
                 </h2>
               </div>
             </div>
+
             <div className="row row-pt-md">
-              <div className="col-md-4 text-center animate-box">
-                <div className="services color-1">
+              {data.detail.map(detail=>(
+                <div className="col-md-4 text-center animate-box">
+                <div className={detail.color}>
                   <span className="icon">
-                    <i className="icon-bulb" />
+                    <i className={detail.icon} />
                   </span>
                   <div className="desc">
-                    <h3>Web Development </h3>
+                    <h3>{detail.skill} </h3>
                     <p>
-                      I have experience building websites using
-                      JavaScript,React,HTML,CSS
+                    {detail.description}
                     </p>
                   </div>
                 </div>
-              </div>
-              <div className="col-md-4 text-center animate-box">
-                <div className="services color-3">
-                  <span className="icon">
-                    <i className="icon-phone3" />
-                  </span>
-                  <div className="desc">
-                    <h3>Mobile App Development</h3>
-                    <p>
-                      I have experience building Mobile Application using React
-                      Native, Android Studio
-                    </p>
-                  </div>
                 </div>
-              </div>
-              {/* <div className="col-md-4 text-center animate-box">
-                <div className="services color-5">
-                <span className="icon">
-                    <i className="icon-data" />
-                </span>
-                <div className="desc">
-                    <h3>Dev Ops</h3>
-                    <p>I am pursuing my internship with DevOps team at Juniper and working with tools like Jenkins, Docker, K8s</p>
-                </div>
-                </div>
-            </div> */}
-              {/*
-            <div className="col-md-4 text-center animate-box">
-                <div className="services color-2">
-                <span className="icon">
-                    <i className="icon-data" />
-                </span>
-                <div className="desc">
-                    <h3>Dev Ops</h3>
-                    <p>Jenkins , Kubernetes , Docker </p>
-                </div>
-                </div>
-            </div>
-            <div className="col-md-4 text-center animate-box">
-                <div className="services color-4">
-                <span className="icon">
-                    <i className="icon-layers2" />
-                </span>
-                <div className="desc">
-                    <h3>Graphic Design</h3>
-                    <p>My friend knows .. P</p>
-                </div>
-                </div>
-            </div>
-            <div className="col-md-4 text-center animate-box">
-                <div className="services color-6">
-                <span className="icon">
-                    <i className="icon-phone3" />
-                </span>
-                <div className="desc">
-                    <h3>Digital Marketing</h3>
-                    <p>I use Instagram eight hours a day :) </p>
-                </div>
-                </div>
-            </div>
-            */}
+              ))}
+              
+
             </div>
           </div>
         </section>

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import { timeline } from "../Data/Data";
 
+var data = timeline;
 export default class Timeline extends Component {
   render() {
     return (
@@ -18,109 +20,24 @@ export default class Timeline extends Component {
             <div className="row">
               <div className="col-md-12">
                 <div className="timeline-centered">
-                <article
+                {data.stats.map(stats=>(<article
                     className="timeline-entry animate-box"
                     data-animate-effect="fadeInLeft"
                   >
                     <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-3">
-                        <i className="icon-pen2" />
+                      <div className={stats.color}>
+                        <i className={stats.icon} />
                       </div>
                       <div className="timeline-label">
                         <h2>
-                          Internship at Bitibe Technologies Pvt. Ltd.
-                          <span>January/2020 - April/2020</span>
+                          {stats.company} <span>{stats.duration}</span>
                         </h2>
-                        <p>
-                          I recently have completed my internship at Bitibe Technologies
-                          Pvt. Ltd. as a Software Developer-Intern in the Developer
-                          team. My major part of the work has been into the
-                          field of developing Mobile Application for the
-                          Clients. I explored various libraries of React Native and
-                          Node.js also explored other technologies like
-                          postman.
+                        <p align="justify">
+                        {stats.description}
                         </p>
                       </div>
                     </div>
-                  </article>
-                  <article
-                    className="timeline-entry animate-box"
-                    data-animate-effect="fadeInLeft"
-                  >
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-3">
-                        <i className="icon-pen2" />
-                      </div>
-                      <div className="timeline-label">
-                        <h2>
-                          Internship at ThunderPod Pvt. Ltd.{" "}
-                          <span>June/2019 - July/2019</span>
-                        </h2>
-                        <p>
-                          I recently have completed my internship at ThunderPod
-                          Pvt. Ltd. as a Software Developer-Intern in the DevOps
-                          team. My major part of the work has been into the
-                          field of creating Multi-Admin Login Panel for the
-                          Company. I explored various libraries of ReactJS and
-                          Node.js also explored other technologies like
-                          expressJS and Sqlite3.
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                  <article
-                    className="timeline-entry animate-box"
-                    data-animate-effect="fadeInTop"
-                  >
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-4">
-                        <i className="icon-pen2" />
-                      </div>
-                      <div className="timeline-label">
-                        <h2>
-                          Undergraduation at SVVV<span>2015-2019</span>
-                        </h2>
-                        <p>
-                          I am pursuing my under-graduation studies with major
-                          in C.C.E.(Computer & Communication Engineering). I
-                          have taken courses like DSA, OOPs, Computer Networks,
-                          over the years and have better understanding of these
-                          subjects.
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                  <article
-                    className="timeline-entry animate-box"
-                    data-animate-effect="fadeInLeft"
-                  >
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-5">
-                        <i className="icon-pen2" />
-                      </div>
-                      <div className="timeline-label">
-                        <h2>
-                          Primary and Higher Education <span>2003-2016</span>
-                        </h2>
-                        <p>
-                          I have completed my higher secondary education with
-                          major subjects as Physics,Chemistry & Maths. During my
-                          time at school, I have developed interest in Computer
-                          field and started working on the coding platform,
-                          since then i have my keen interest in Computer Science
-                          field.
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                  <article
-                    className="timeline-entry begin animate-box"
-                    data-animate-effect="fadeInBottom"
-                  >
-                    <div className="timeline-entry-inner">
-                      <div className="timeline-icon color-none"></div>
-                    </div>
-                  </article>
+                  </article>))}
                 </div>
               </div>
             </div>
