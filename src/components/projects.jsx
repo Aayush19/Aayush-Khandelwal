@@ -3,9 +3,9 @@ import { Project } from "../Data/Data";
 
 var data = Project;
 export default class Projects extends Component {
-  render() {
-    return (
-      <div>
+	render() {
+		return (
+			<div>
 				<section className="colorlib-work" data-section="projects">
 					<div className="colorlib-narrow-content">
 						<div className="row">
@@ -15,23 +15,24 @@ export default class Projects extends Component {
 							</div>
 						</div>
 						<div className="row">
-						{data.data.map(data=>(
-							<div className="col-md-4 animate-box" data-animate-effect="fadeInLeft">
-								<div className="project" style={{backgroundColor: '	#D3D3D3'}}>
-									<div className="desc">
-										<div className="con">
-											<h3><a href="work.html">{data.heading}</a></h3>
-											<span>{data.title}</span>
-											
-											<p className="icon">
-												<span><a href="#"><i className="icon-share3" /></a></span>
-												<span><a href="#"><i className="icon-eye" /> {data.view}</a></span>
-												<span><a href="#"><i className="icon-heart" /> {data.like}</a></span>
-											</p>
+							<img src='https://previews.123rf.com/images/erickn/erickn1302/erickn130200015/17754478-3d-yellow-grey-work-in-progress-text-on-white.jpg' style={{ width: '100%' }} alt="Logo" />
+							{/* {data.data.map(data => (
+								<div className="col-md-4 animate-box" data-animate-effect="fadeInLeft">
+									<div className="project" style={{ backgroundColor: '	#D3D3D3' }}>
+										<div className="desc">
+											<div className="con">
+												<h3><a href="work.html">{data.heading}</a></h3>
+												<span>{data.title}</span>
+
+												<p className="icon">
+													<span><a href="#"><i className="icon-share3" /></a></span>
+													<span><a href="#"><i className="icon-eye" /> {data.view}</a></span>
+													<span><a href="#"><i className="icon-heart" /> {data.like}</a></span>
+												</p>
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>))}
+								</div>))} */}
 						</div>
 						{/* <div className="row">
 							<div className="col-md-12 animate-box">
@@ -40,7 +41,7 @@ export default class Projects extends Component {
 						</div> */}
 					</div>
 				</section>
-      </div>
-    )
-  }
+			</div>
+		)
+	}
 }

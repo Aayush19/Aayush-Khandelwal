@@ -1,17 +1,21 @@
 import React, { Component } from "react";
 // import '../../public/css/image.css'
-import {intro} from '../Data/Data'
+import { intro } from '../Data/Data'
+import Projects from "./projects";
 
-var data=intro.detail;
+var data = intro.detail;
 export default class Introduction extends Component {
+
   render() {
     return (
       <div>
+
         <section
           id="colorlib-hero"
           className="js-fullheight"
           data-section="home"
         >
+
           <div className="flexslider js-fullheight">
             <ul className="slides">
               <li
@@ -63,8 +67,8 @@ export default class Introduction extends Component {
                           <p>
                             <a
                               className="btn btn-primary btn-learn"
-                              href="#projects"
-                              
+                              href="https://github.com/Aayush19"
+                              onBlur={() => this.renFun}
                               rel="noopener noreferrer"
                               style={{ color: "white" }}
                             >
@@ -79,7 +83,9 @@ export default class Introduction extends Component {
               </li>
             </ul>
           </div>
+
         </section>
+
       </div>
     );
   }
